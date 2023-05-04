@@ -1,0 +1,99 @@
+{% load blog_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+
+<head>
+   <title>{% block title %}{% endblock %}</title>
+   <link href="{% static "CSS\blog.css" %}" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <header class="header">
+        <div class="box"><a class="black" href="http://127.0.0.1:8000/blog/">Article</a></div>
+        <div class="box"><a class="black" href="http://127.0.0.1:8000/blog/">Factors</a></div>
+        <div class="box"><a class="black" href="http://127.0.0.1:8000/blog/">History</a></div>
+        <div class="box"><a class="black" href="http://127.0.0.1:8000/blog/">Sample</a></div>
+        <div class="box"><a class="black" href="http://127.0.0.1:8000/blog/">Main</a></div>
+    </header>
+    <div class="serch" >
+     <a href="http://127.0.0.1:8000/blog/search/"<button class="sech">SEARCH</button></a>
+    </div>
+    <div id="sidebar">
+        <h2>Drug Use and abuse</h2>
+        <p>Article</p>
+    </div>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div class="sec">
+        <div class="secs">STAY OFF DRUGS!</div>
+        <div class="secs">STAY SANE!</div>
+        <div class="secs">YOU CAN DO IT!</div>
+    </div>
+ 
+
+
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h3>About Us</h3>
+              <p>A brief introduction about the blog and the author.</p>
+            </div>
+            <div class="col-md-4">
+              <h3>Navigation</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Archive</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Tags</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3>Subscribe</h3>
+              <p>Subscribe to our newsletter to get updates.</p>
+              <form>
+                <input type="email" placeholder="Enter your email address">
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h3>EDITORS</h3>
+              <!-- <p>.</p> -->
+            </div>
+            <div class="col-md-4">
+              <!-- <h3>Navigation</h3> -->
+              <ul>
+                <li><a href="#">KINGZY</a></li>
+                <li><a href="#">ADA</a></li>
+                <li><a href="#">SAMMYSEN</a></li>
+                <li><a href="#">TOP G</a></li>
+              </ul>
+            </div>
+            <!-- <div class="col-md-4">
+              <h3>Subscribe</h3>
+              <p>Subscribe to our newsletter to get updates.</p>
+              <form>
+                <input type="email" placeholder="Enter your email address">
+                <button type="submit">Subscribe</button>
+              </form>
+            </div> -->
+          </div>
+        </div>
+    </footer>
+      
+
+    
+</body>
+
+</html>
